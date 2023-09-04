@@ -9,11 +9,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.0.5",
+    "styled-normalize": "^8.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn watch:tokens & react-scripts start",
     "build": "react-scripts build",
+    "build:tokens": "style-dictionary build --config ./style-dictionary.config.json",
+    "watch:tokens": "yarn build:tokens & chokidar \"./tokens/**/*\" -c \"yarn build:tokens\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +38,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "hex-to-rgba": "^2.0.1",
+    "style-dictionary": "^3.8.0"
   }
 }
