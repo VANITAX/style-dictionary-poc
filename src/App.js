@@ -52,17 +52,13 @@ function App() {
     <Container>
         <Logo src={logo} className="App-logo" alt="logo" />
         <Content>
-          版本 2.30.0 <br/>
-          272-4b5d314e, iOS Enterprise <br/>
-          ©SWAG 保留一切權利
+          Footer
         </Content>
         <Info>
-          <Text>觀看更多資訊</Text>
-          <Link href="https://www.swag.live/" >https://www.swag.live/</Link>
+          <Link href="#" >Link Example</Link>
         </Info>
         <Info>
-          <Text>聯繫客服</Text>
-          <Link href="mailto:support@swag.live" >support@swag.live</Link>
+          <Text>Text Example</Text>
         </Info>
     </Container>
   );
